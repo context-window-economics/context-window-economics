@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "context-window-economics"
+version = "0.1.0"
+description = "Bilateral cost allocation, context pricing, and resource markets for autonomous agent interactions — the economic layer of the Agent Trust Stack"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.8"
+authors = [
+    { name = "AB Support", email = "info@vibeagentmaking.com" },
+]
+keywords = [
+    "agent", "economics", "context-window", "token-metering", "cost-allocation",
+    "settlement", "shapley", "nash-bargaining", "congestion-pricing", "spam-prevention",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Office/Business :: Financial",
+]
+
+[project.urls]
+Homepage = "https://vibeagentmaking.com"
+Repository = "https://github.com/brycebostick/context-window-economics"
+Whitepaper = "https://vibeagentmaking.com/whitepaper/context-window-economics/"
+
+[project.optional-dependencies]
+arp = ["agent-rating-protocol>=0.1.0"]
+coc = ["chain-of-consciousness>=0.1.0"]
+asa = ["agent-service-agreements>=0.1.0"]
+ajp = ["agent-justice-protocol>=0.1.0"]
+amp = ["agent-matchmaking>=0.1.0"]
+trust = [
+    "agent-rating-protocol>=0.1.0",
+    "chain-of-consciousness>=0.1.0",
+    "agent-service-agreements>=0.1.0",
+    "agent-justice-protocol>=0.1.0",
+    "agent-matchmaking>=0.1.0",
+]
+dev = ["pytest>=7.0", "pytest-cov>=4.0"]
+
+[project.scripts]
+cwep = "context_window_economics.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["context_window_economics*"]
