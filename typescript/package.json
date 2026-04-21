@@ -1,0 +1,40 @@
+{
+  "name": "context-window-economics",
+  "version": "0.1.0",
+  "description": "Bilateral cost allocation, context pricing, and resource markets for autonomous agent interactions — TypeScript reference implementation",
+  "author": "AB Support LLC",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/tests/cwep.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "context-window-economics",
+    "cwep",
+    "token-metering",
+    "cost-allocation",
+    "bilateral-settlement",
+    "ai-agent",
+    "shapley-value",
+    "nash-bargaining",
+    "congestion-pricing",
+    "spam-prevention"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AB-Support/context-window-economics"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.4.0"
+  }
+}
